@@ -5,70 +5,96 @@
     <title>Магазин гаджетов «DEVICE»</title>
   </head>
   <body>
-    <header class="main-header">
-      <nav class="main-navigation">
-        <a class="main-header-logo">
-          <img src="img/logo-device.svg" width="163" height="35" alt="Логотип магазина «DEVICE»">
-        </a>
-        <p class="search">Поиск по сайту</p>
-        <ul class="user-navigation">
-          <li class="login-link">Войти</li>
-        </ul>
-        <a class="compare" href="compare.html">Сравнить</a>
-        <a class="shopping-cart" href="shopping-cart.html">Корзина</a>
-        <ul class="site-navigation">
-          <li><a href="catalog.html">Каталог товаров</a></li>
-          <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="guarantee.html">Гарантия</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
+    <header class="header">
+      <a class="header__logo logo">
+        <img class="header__logo-img" src="img/logo-device.svg" width="163" height="35" alt="Логотип магазина «DEVICE»">
+      </a>
+      <p class="header__search">
+        Поиск по сайту
+      </p>
+      <ul class="header__user-nav user-nav">
+        <li class="user-nav__login">Войти</li>
+      </ul>
+      <a class="header__compare compare" href="compare.html">Сравнить</a>
+      <a class="header__cart cart" href="cart.html">Корзина</a>
+      <nav class="header__nav site-nav">
+        <a class="site-nav__catalog" href="catalog.html">Каталог товаров</a>
+        <ul class="site-nav__nav-menu nav-menu">
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="delivery.html">Доставка</a>
+          </li>
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="guarantee.html">Гарантия</a>
+          </li>
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="contacts.html">Контакты</a>
+          </li>
         </ul>
       </nav>
     </header>
     <main class="container">
       <h1 class="visually-hidden">Магазин гаджетов «DEVICE»</h1>
       <section class="about-us">
-        <h2>О нас</h2>
-        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-        <ul class="transport-companies">
-          <li>Деловые Линии</li>
-          <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспедиция</li>
+        <h2 class="about-us__title">О нас</h2>
+        <p class="about-us__content">
+          Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+        </p>
+        <p class="about-us__content">
+          Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
+        </p>
+        <ul class="about-us__transport transport">
+          <li class="transport__company">Деловые Линии</li>
+          <li class="transport__company">Автотрейдинг</li>
+          <li class="transport__company">ЖелДорЭкспедиция</li>
         </ul>
-        <a class="button" href="about-us.html">Подробнее о нас</a>
+        <a class="about-us__button button" href="about-us.html">Подробнее о нас</a>
       </section>
       <section class="contacts">
-        <h2>Контакты</h2>
-        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <a href="map.html">
-          <img src="img/map.png" alt="Ул. Строителей, 15">
+        <h2 class="contacts__title title">Контакты</h2>
+        <p class="contacts__content">
+          Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
+        </p>
+        <a class="contacts__mao-link" href="map.html">
+          <img class="contacts__map-img" src="img/map.png" width="560" height="222" alt="Ул. Строителей, 15">
         </a>
-        <a class="button" href="write-us.html">Напишите нам</a>
+        <a class="contacts__button button" href="write-us.html">Напишите нам</a>
       </section>
     </main>
-    <footer class="main-footer">
-      <a class="main-footer-logo">
-        <img src="img/logo-device.svg" width="163" height="35" alt="Логотип магазина «DEVICE»">
+    <footer class="footer">
+      <a class="footer__logo logo">
+        <img class="footer__logo-img" src="img/logo-device.svg" width="163" height="35" alt="Логотип магазина «DEVICE»">
       </a>
-      <ul class="user-navigation">
-        <li class="login-link">Войти</li>
+      <ul class="footer__user-nav user-nav">
+        <li class="user-nav__login">Войти</li>
       </ul>
-      <a class="compare" href="compare.html">Сравнить</a>
-      <a class="shopping-cart" href="shopping-cart.html">Корзина</a>
-      <p class="footer-adress">г. Москва, ул. Строителей, 15</p>
-      <ul class="site-navigation">
-        <li><a href="delivery.html">Доставка</a></li>
-        <li><a href="guarantee.html">Гарантия</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
+      <a class="footer__compare compare" href="compare.html">Сравнить</a>
+      <a class="footer__cart cart" href="cart.html">Корзина</a>
+      <p class="footer__adress">г. Москва, ул. Строителей, 15</p>
+      <ul class="footer__nav-menu nav-menu">
+        <li class="nav-menu__item">
+          <a class="nav-menu__link" href="delivery.html">Доставка</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="nav-menu__link" href="guarantee.html">Гарантия</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="nav-menu__link" href="contacts.html">Контакты</a>
+        </li>
       </ul>
-      <p class="footer-phone">Тел.: +7 (495) 495-95-95</p>
-      <ul class="footer-social">
-        <li><a class="social-button" href="#">Фейсбук</a></li>
-        <li><a class="social-button" href="#">Инстаграм</a></li>
-        <li><a class="social-button" href="#">Твиттер</a></li>
+      <p class="footer__phone">Тел.: +7 (495) 495-95-95</p>
+      <ul class="footer__social social">
+        <li class="social__item">
+          <a class="social__button social__button--fb" href="#">Фейсбук</a>
+        </li>
+        <li class="social__item">
+          <a class="social__button social__button--ig" href="#">Инстаграм</a>
+        </li>
+        <li class="social__item">
+          <a class="social__button social__button--tw" href="#">Твиттер</a>
+        </li>
       </ul>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="img/logo-htmlacademy.svg" alt="Логотип HTML Академии">
+      <a class="footer__academy-link" href="https://htmlacademy.ru/intensive/htmlcss">
+        <img class="footer__academy-img" src="img/logo-htmlacademy.svg" width="27" height="35" alt="Логотип HTML Академии">
       </a>
     </footer>
   </body>
