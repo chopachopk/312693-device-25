@@ -34,7 +34,7 @@
        url('../fonts/opensanslight.woff') format('woff');
 }
 
-  .visually-hidden {
+.visually-hidden {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px);
 	clip: rect(1px, 1px, 1px, 1px);
@@ -47,7 +47,8 @@
 
 .nav-catalog__list,
 .map-popup,
-.letter-popup {
+.letter-popup,
+.details {
   display: none;
 }
 
@@ -218,6 +219,93 @@ a {
   font-weight: 800;
   letter-spacing: 0.5px;
   color: #000000;
+}
+
+.main__title {
+  font-family: 'Gilroy';
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #000000;
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs__content {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  letter-spacing: 0.1px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs__content:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs__content--current:hover {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs__content:focus {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.filters {
+  background-color: #ebebeb;
+}
+
+.filter__set {
+  border: none;
+}
+
+.filter__setname {
+  font-family: 'Gilroy';
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: #000000;
+}
+
+.color-list,
+.bluetooth-list {
+  list-style: none;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 300;
+  letter-spacing: 0.1px;
+  color: #000000;
+}
+
+.color-list__input:disabled + .color-list__label,
+.bluetooth-list__input:disabled + .bluetooth-list__label {
+  color: #a6a6a6;
+}
+
+.catalog__list {
+  list-style: none;
+}
+
+.catalog-item__link {
+  font-family: 'Gilroy';
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: #000000;
+}
+
+.catalog-item__price {
+  font-family: 'Gilroy';
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+  text-align: right;
 }
 
 .footer {
