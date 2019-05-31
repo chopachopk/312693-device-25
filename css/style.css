@@ -34,7 +34,7 @@
        url('../fonts/opensanslight.woff') format('woff');
 }
 
-/* .visually-hidden {
+  .visually-hidden {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px);
 	clip: rect(1px, 1px, 1px, 1px);
@@ -43,7 +43,13 @@
 	height: 1px !important;
 	width: 1px !important;
 	overflow: hidden;
-} */
+}
+
+.nav-catalog__list,
+.map-popup,
+.letter-popup {
+  display: none;
+}
 
 body {
   margin: 0;
@@ -54,7 +60,6 @@ body {
   line-height: 30px;
   font-weight: 300;
   color: #464646;
-  letter-spacing: 0.2px;
 
   background-color: #ffffff;
 }
@@ -72,6 +77,7 @@ a {
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
+  letter-spacing: 0.2px;
   color: rgba(0, 0, 0, 0.3);
 
   background-color: transparent;
@@ -94,6 +100,7 @@ a {
 .user-nav__login-link,
 .compare,
 .cart {
+  letter-spacing: 0.2px;
   color: #000000;
 }
 
@@ -114,9 +121,9 @@ a {
   font-size: 18px;
   line-height: 24px;
   font-weight: 800;
-  color: #000000;
   text-transform: uppercase;
   letter-spacing: 3.6px;
+  color: #000000;
 }
 
 .nav-catalog__title:hover {
@@ -133,6 +140,7 @@ a {
 
 .nav-catalog__link {
   line-height: 36px;
+  letter-spacing: 0.2px;
   color: #000000;
 }
 
@@ -153,9 +161,9 @@ a {
   font-size: 18px;
   line-height: 24px;
   font-weight: 800;
-  color: #000000;
   text-transform: uppercase;
   letter-spacing: 3.6px;
+  color: #000000;
 }
 
 .nav-menu__link:hover {
@@ -164,4 +172,88 @@ a {
 
 .nav-menu__link:focus {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.about-us__title {
+  font-family: 'Gilroy';
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #000000;
+}
+
+.transport__company {
+  font-family: 'Gilroy';
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.button {
+  font-family: 'Gilroy';
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  color: #000000;
+
+  border: none;
+}
+
+.contacts__title {
+  font-family: 'Gilroy';
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #000000;
+}
+
+.footer {
+  color: #ffffff;
+
+  background-color: #464646;
+}
+
+.user-nav__login-link--footer,
+.compare--footer,
+.cart--footer {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.user-nav__login-link--footer:hover,
+.compare--footer:hover,
+.cart--footer:hover {
+  color: #ffffff;
+}
+
+.user-nav__login-link--footer:focus,
+.compare--footer:focus,
+.cart--footer:focus {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-menu__link--footer {
+  color: #ffffff;
+}
+
+.social {
+  list-style: none;
+}
+
+.social__button {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.social__button:hover {
+  color: #ffffff;
+}
+
+.social__button:focus {
+  color: rgba(255, 255, 255, 0.3);
 }
