@@ -124,7 +124,7 @@ a {
 }
 
 .nav-catalog__title {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 800;
@@ -164,7 +164,7 @@ a {
 }
 
 .nav-menu__link {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 800;
@@ -182,7 +182,7 @@ a {
 }
 
 .about-us__title {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', Arial, sans-serif;
   font-size: 47px;
   line-height: 48px;
   font-weight: 800;
@@ -191,7 +191,7 @@ a {
 }
 
 .transport__company {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', Arial, sans-serif;
   font-size: 16px;
   line-height: 40px;
   font-weight: 800;
@@ -199,7 +199,7 @@ a {
 }
 
 .button {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 800;
@@ -213,7 +213,7 @@ a {
 }
 
 .contacts__title {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', Arial, sans-serif;
   font-size: 47px;
   line-height: 48px;
   font-weight: 800;
@@ -222,7 +222,7 @@ a {
 }
 
 .main__title {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', Arial, sans-serif;
   font-size: 47px;
   line-height: 48px;
   font-weight: 800;
@@ -263,7 +263,7 @@ a {
 }
 
 .filter__setname {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 800;
@@ -291,7 +291,7 @@ a {
 }
 
 .catalog-item__link {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 800;
@@ -300,7 +300,7 @@ a {
 }
 
 .catalog-item__price {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 300;
