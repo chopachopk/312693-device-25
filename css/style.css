@@ -38,8 +38,8 @@
 	position: absolute;
 	clip: rect(1px 1px 1px 1px);
 	clip: rect(1px, 1px, 1px, 1px);
-	padding:0;
-	border:0;
+	padding: 0;
+	border: 0;
   width: 1px;
 	height: 1px;
 	overflow: hidden;
@@ -79,15 +79,52 @@ body {
 
   background-color: transparent;
   border: none;
-  opacity: 0.3;
-}
-
-.search__field:hover {
-  color: rgba(0, 0, 0, 0.6);
 }
 
 .search__field:focus {
   color: #000000;
+}
+
+.search__field::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search__field::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: rgba(0, 0, 0, 0.3);
+  opacity:  1;
+}
+
+.search__field:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search__field::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search__field::placeholder { /* Most modern browsers ? */
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search__field:hover::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search__field:hover::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: rgba(0, 0, 0, 0.6);
+  opacity:  1;
+}
+
+.search__field:hover:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search__field:hover::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search__field:hover::placeholder { /* Most modern browsers ? */
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .user-nav {
