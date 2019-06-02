@@ -56,12 +56,6 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: 'OpenSans', Arial, sans-serif;
-  font-size: 15px;
-  line-height: 30px;
-  font-weight: 300;
-  color: #464646;
-
   background-color: #ffffff;
 }
 
@@ -70,7 +64,7 @@ body {
 }
 
 .search__field {
-  font-family: inherit;
+  font-family: 'OpenSans', Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
@@ -136,6 +130,11 @@ body {
 .user-nav__logout-link,
 .compare,
 .cart {
+  font-family: 'OpenSans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #464646;
   letter-spacing: 0.2px;
   text-decoration: none;
 }
@@ -167,7 +166,11 @@ body {
 }
 
 .nav-catalog__link {
+  font-family: 'OpenSans', Arial, sans-serif;
+  font-size: 15px;
   line-height: 36px;
+  font-weight: 300;
+  color: #464646;
   letter-spacing: 0.2px;
   text-decoration: none;
 }
@@ -193,6 +196,14 @@ body {
   font-weight: 800;
   letter-spacing: 0.5px;
   color: #000000;
+}
+
+.content-text {
+  font-family: 'OpenSans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #464646;
 }
 
 .transport__company {
@@ -223,6 +234,7 @@ body {
 }
 
 .breadcrumbs__content {
+  font-family: 'OpenSans', Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
   font-weight: 300;
@@ -263,6 +275,7 @@ body {
 .color-list,
 .bluetooth-list {
   list-style: none;
+  font-family: 'OpenSans', Arial, sans-serif;
   font-size: 14px;
   line-height: 40px;
   font-weight: 300;
@@ -299,6 +312,10 @@ body {
 }
 
 .footer {
+  font-family: 'OpenSans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
   color: #ffffff;
 
   background-color: #464646;
