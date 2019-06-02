@@ -149,7 +149,7 @@ body {
   text-decoration: none;
 }
 
-.about-us__title {
+.title {
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 47px;
   line-height: 48px;
@@ -179,24 +179,6 @@ body {
   color: #000000;
 
   border: none;
-}
-
-.contacts__title {
-  font-family: 'Gilroy', Arial, sans-serif;
-  font-size: 47px;
-  line-height: 48px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  color: #000000;
-}
-
-.main__title {
-  font-family: 'Gilroy', Arial, sans-serif;
-  font-size: 47px;
-  line-height: 48px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  color: #000000;
 }
 
 .breadcrumbs {
