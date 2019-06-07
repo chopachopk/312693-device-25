@@ -61,8 +61,8 @@ body {
 
 .header {
   width: 1040px;
-  margin: 40px auto 50px;
-  padding: 1px 60px 0;
+  margin: 40px auto 0;
+  padding: 1px 60px 1px;
   position: relative;
 
   background-color: rgba(240, 197, 46, 0.5);
@@ -189,6 +189,7 @@ body {
 .header__nav {
   display: flex;
   margin-top: 45px;
+  margin-bottom: 50px;
 }
 
 .site-nav__catalog {
@@ -253,7 +254,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 1160px;
-  margin: 0 auto;
+  margin: 0 auto 90px;
   padding: 0 20px;
 }
 
@@ -302,7 +303,22 @@ body {
   border: none;
 }
 
+.main__top {
+  width: 1040px;
+  margin: 45px auto;
+}
+
+.main__title {
+  margin: 0 0 30px;
+}
+
+.main__breadcrumbs {
+  margin: 0;
+}
+
 .breadcrumbs {
+  display: flex;
+  padding: 0;
   list-style: none;
 }
 
@@ -326,6 +342,18 @@ body {
 
 .breadcrumbs__content:focus {
   color: rgba(0, 0, 0, 0.1);
+}
+
+.main__content {
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
+  padding-left: 60px;
+  margin: 0 auto;
+}
+
+.main__filters {
+  width: 268px;
 }
 
 .filters {
@@ -361,8 +389,22 @@ body {
   color: #a6a6a6;
 }
 
+.catalog {
+  width: 760px;
+}
+
 .catalog__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.catalog-item {
+  width: 360px;
+  padding-bottom: 45px;
 }
 
 .catalog-item__link {
@@ -396,7 +438,7 @@ body {
 
 .footer__wrapper {
   width: 1160px;
-  margin: 90px auto 0;
+  margin: 0 auto;
   padding: 65px 20px;
 }
 
