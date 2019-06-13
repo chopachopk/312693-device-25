@@ -70,10 +70,10 @@ body {
 
 .header__logo {
   position: absolute;
-  top: -19px;
+  top: -20px;
 }
 
-.header__top {
+.header__control-section {
   display: flex;
   margin-top: 50px;
 }
@@ -186,7 +186,7 @@ body {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.header__nav {
+.header__nav-section {
   display: flex;
   margin-top: 45px;
   margin-bottom: 50px;
@@ -427,6 +427,8 @@ body {
 }
 
 .footer {
+  min-width: 1200px;
+
   font-family: 'OpenSans', Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
@@ -442,7 +444,7 @@ body {
   padding: 65px 20px;
 }
 
-.footer__top {
+.footer__control-section {
   display: flex;
 }
 
@@ -467,7 +469,7 @@ body {
   text-align: right;
 }
 
-.footer__middle {
+.footer__contacts-section {
   display: flex;
   justify-content: space-between;
 }
@@ -477,7 +479,7 @@ body {
   justify-content: space-between;
 }
 
-.footer__bottom {
+.footer__links-section {
   display: flex;
   margin-top: 65px;
 }
