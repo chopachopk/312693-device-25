@@ -73,6 +73,14 @@ body {
   top: -20px;
 }
 
+.logo:hover {
+  opacity: 0.6;
+}
+
+.logo:focus {
+  opacity: 0.3;
+}
+
 .header__control-section {
   display: flex;
   padding-top: 34px;
@@ -214,13 +222,20 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 }
 
 .header__user-nav {
-  width: 286px;
+  width: 287px;
   margin: 0;
 }
 
 .user-nav {
-  padding: 0;
+  display: flex;
+
   list-style: none;
+}
+
+.header__user-nav,
+.header__compare,
+.header__cart {
+  padding: 8px 0;
 }
 
 .user-nav__login-link,
@@ -231,7 +246,6 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   display: inline-block;
 
   height: 31px;
-  padding: 8px 0;
 
   font-family: 'OpenSans', Arial, sans-serif;
   font-size: 15px;
@@ -242,17 +256,19 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   text-decoration: none;
 }
 
-.user-nav__login-link {
+.user-nav__login-link,
+.user-nav__profile-link {
   position: relative;
 
   padding-left: 27px;
 }
 
-.user-nav__login-link::before {
+.user-nav__login-link::before,
+.user-nav__profile-link::before {
   content: "";
 
   position: absolute;
-  top: 17px;
+  top: 9px;
   left: 0;
 
   width: 13px;
@@ -261,6 +277,11 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   background-image: url(../img/user-icon.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.user-nav__logout-link {
+  margin-left: 20px;
+  opacity: 0.3;
 }
 
 .header__compare {
@@ -420,7 +441,7 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   display: flex;
   justify-content: space-between;
   width: 1160px;
-  margin: 0 auto 90px;
+  margin: 0 auto 80px;
   padding: 0 20px;
 }
 
@@ -473,7 +494,7 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 }
 
 .about-us__transport {
-  margin: 65px 0;
+  margin: 65px 0 53px;
   padding-left: 36px;
 
   list-style: none;
@@ -505,6 +526,11 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 }
 
 .button {
+  position: relative;
+
+  display: inline-block;
+  padding: 8px;
+
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -519,8 +545,45 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   border: none;
 }
 
+.button::before {
+  content: "";
+  z-index: -1;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  width: 100%;
+  height: 8px;
+
+  background-color: #f0c52e;
+  transition: transform;
+  transform: translateY(-4px);
+}
+
+.button:hover::before,
+.button:focus::before {
+  height: 40px;
+  transform: translateY(-20px);
+}
+
+.button:focus {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.about-us__button,
+.contacts__button {
+  min-width: 244px;
+}
+
 .contacts__content {
   margin-bottom: 40px;
+}
+
+.contacts__map-link {
+  display: block;
+
+  margin-bottom: 62px;
 }
 
 .main__top {
@@ -666,55 +729,184 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 
 .footer__control-section {
   display: flex;
+  margin-bottom: 32px;
 }
 
 .footer__logo {
   width: 180px;
-  margin-right: auto;
+  height: 35px;
 }
 
 .footer__user-nav {
-  width: 340px;
   margin: 0;
-  text-align: right;
+  margin-left: auto;
+}
+
+.user-nav__login-link--light::before,
+.user-nav__profile-link--light::before {
+  background-image: url(../img/user-icon-yellow.svg);
 }
 
 .footer__compare {
+  position: relative;
+
   width: 135px;
+
   text-align: right;
 }
 
+.footer__compare::before {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  right: 82px;
+
+  width: 10px;
+  height: 10px;
+
+  background-image: url(../img/compare-icon-yellow.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .footer__cart {
+  position: relative;
+
   width: 120px;
   text-align: right;
+}
+
+.footer__cart::before {
+  content: "";
+
+  position: absolute;
+  top: 9px;
+  right: 70px;
+
+  width: 12px;
+  height: 12px;
+
+  background-image: url(../img/cart-icon-yellow.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.user-nav__login-link--light:hover::before,
+.user-nav__profile-link--light:hover::before,
+.footer__compare:hover::before,
+.footer__cart:hover::before {
+  opacity: 0.6;
+}
+
+.user-nav__login-link--light:focus::before,
+.user-nav__profile-link--light:focus::before,
+.footer__compare:focus::before,
+.footer__cart:focus::before {
+  opacity: 0.3;
 }
 
 .footer__contacts-section {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.footer__adress,
+.footer__phone {
+  min-width: 220px;
+  margin: 0;
+}
+
+.footer__phone {
+  text-align: right;
 }
 
 .footer__nav-menu {
   width: 430px;
+  margin: 0;
+
   justify-content: space-between;
 }
 
-.footer__links-section {
-  display: flex;
-  margin-top: 65px;
+.nav-menu__item--footer {
+  width: auto;
 }
 
-.footer__line {
+.footer__links-section {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 80px;
+}
+
+.footer__links-section::before {
+  content: "";
+
+  position: absolute;
+  top: 15px;
+  left: 0;
+
   width: 80px;
+  height: 7px;
+
+  background-color: #ffc600;
 }
 
 .footer__social {
   margin: 0 auto;
 }
 
+.social {
+  display: flex;
+  justify-content: space-between;
+
+  width: 140px;
+}
+
+.social__button {
+  display: block;
+
+  width: 32px;
+  height: 32px;
+
+  opacity: 0.3;
+}
+
+.social__button:hover {
+  opacity: 0.6;
+}
+
+.social__button:focus {
+  opacity: 0.1;
+}
+
+.social__button--fb {
+  background-image: url(../img/social-facebook.svg);
+}
+
+.social__button--ig {
+  background-image: url(../img/social-instagram.svg);
+}
+
+.social__button--tw {
+  background-image: url(../img/social-twitter.svg);
+}
+
 .footer__academy-link {
   width: 80px;
+  height: 35px;
   text-align: right;
+}
+
+.footer__academy-link:hover {
+  opacity: 0.6;
+}
+
+.footer__academy-link:focus {
+  opacity: 0.3;
 }
 
 .link-light {

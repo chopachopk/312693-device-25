@@ -14,8 +14,8 @@
       <div class="header__control-section">
         <form class="header__search search" action="https://echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="searchfield">Поиск по сайту</label>
-          <input class="search__field" type="search" name="searchfield" id="searchfield" placeholder="Поиск по сайту">
-          <input class="search__button visually-hidden" type="submit" value="Найти">
+          <input class="search__field" type="search" name="searchfield" id="searchfield" placeholder="Поиск по сайту" required>
+          <input class="search__button" type="submit" value="Найти">
         </form>
         <ul class="header__user-nav user-nav">
           <li class="user-nav__profile">
@@ -59,7 +59,7 @@
           <li class="nav-menu__item">
             <a class="nav-menu__link link-dark" href="#">Гарантия</a>
           </li>
-          <li class="nav-menu__item">
+          <li class="nav-menu__item nav-menu__item--last">
             <a class="nav-menu__link link-dark" href="#">Контакты</a>
           </li>
         </ul>
@@ -198,11 +198,11 @@
       <div class="footer__wrapper">
         <div class="footer__control-section">
           <a class="footer__logo logo" href="index.html">
-            <img class="footer__logo-img" src="img/logo-device.svg" width="163" height="35" alt="Логотип магазина «DEVICE»">
+            <img class="footer__logo-img" src="img/logo-device-yellow.svg" width="163" height="35" alt="Логотип магазина «DEVICE»">
           </a>
           <ul class="footer__user-nav user-nav">
             <li class="user-nav__profile">
-              <a class="user-nav__profile-link link-light" href="#">Валентин Петухов</a>
+              <a class="user-nav__profile-link user-nav__profile-link--light link-light" href="#">Валентин Петухов</a>
             </li>
             <li class="user-nav__logout">
               <a class="user-nav__logout-link link-light" href="#">Выйти</a>
@@ -214,13 +214,13 @@
         <div class="footer__contacts-section">
           <p class="footer__adress">г. Москва, ул. Строителей, 15</p>
           <ul class="footer__nav-menu nav-menu">
-            <li class="nav-menu__item">
+            <li class="nav-menu__item nav-menu__item--footer">
               <a class="nav-menu__link nav-menu__link--footer" href="#">Доставка</a>
             </li>
-            <li class="nav-menu__item">
+            <li class="nav-menu__item nav-menu__item--footer">
               <a class="nav-menu__link nav-menu__link--footer" href="#">Гарантия</a>
             </li>
-            <li class="nav-menu__item">
+            <li class="nav-menu__item nav-menu__item--footer">
               <a class="nav-menu__link nav-menu__link--footer" href="#">Контакты</a>
             </li>
           </ul>
@@ -230,13 +230,13 @@
           <div class="footer__line"></div>
           <ul class="footer__social social">
             <li class="social__item">
-              <a class="social__button social__button--fb" href="#">Фейсбук</a>
+              <a class="social__button social__button--fb" href="#"><span class="visually-hidden">Фейсбук</span></a>
             </li>
             <li class="social__item">
-              <a class="social__button social__button--ig" href="#">Инстаграм</a>
+              <a class="social__button social__button--ig" href="#"><span class="visually-hidden">Инстаграм</span></a>
             </li>
             <li class="social__item">
-              <a class="social__button social__button--tw" href="#">Твиттер</a>
+              <a class="social__button social__button--tw" href="#"><span class="visually-hidden">Твиттер</span></a>
             </li>
           </ul>
           <a class="footer__academy-link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Интенсивы HTML Академии">
