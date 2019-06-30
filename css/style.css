@@ -634,7 +634,7 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 }
 
 .main__goods {
-  margin: 0 auto;
+  margin: 0 auto 80px;
 }
 
 .goods {
@@ -652,14 +652,12 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 
 .goods__image {
   display: flex;
+  justify-content: center;
+  align-items: center;
 
   height: 160px;
 
   background-color: rgba(240, 197, 46, 0.5);
-}
-
-.goods__icon {
-  margin: 0 auto;
 }
 
 .goods__icon--bottom {
@@ -686,6 +684,72 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 .goods__item:focus .goods__icon,
 .goods__item:focus .goods__title {
   opacity: 0.3;
+}
+
+.main__services-slider {
+  background-image: linear-gradient(to bottom, #ffffff 100px, #e5e5e5 100px);
+}
+
+.services__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.services__control {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 277px;
+  height: 170px;
+  margin: 0 0 70px;
+  padding: 80px 0 70px;
+  border-right: 7px solid #000000;
+
+  list-style: none;
+}
+
+.services__button {
+  width: 160px;
+}
+
+.services__button:focus {
+  color: #f7e184;
+}
+
+.services__button:focus::before {
+  width: 277px;
+
+  background-color: #000000;
+}
+
+.service {
+  width: 460px;
+  padding-right: 300px;
+
+  background-repeat: no-repeat;
+}
+
+.service--delivery {
+  background-image: url(../img/delivery.svg);
+  background-position: top 87px right 66px;
+}
+
+.service__title {
+  margin: 72px 0 28px;
+}
+
+.service__content {
+  font-family: 'OpenSans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  font-weight: 300;
+  letter-spacing: 0.15px;
+  text-align: left;
+  color: #464646;
 }
 
 .main__info {
