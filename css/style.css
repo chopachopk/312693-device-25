@@ -440,7 +440,7 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 }
 
 .main__actual-slider {
-  margin: 0 auto;
+  margin: 0 auto 108px;
 }
 
 .actual {
@@ -450,7 +450,6 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   flex-direction: row;
 
   width: 1160px;
-  margin-bottom: 100px;
 
   background-color: #ffffff;
   background-image: linear-gradient(to bottom, rgba(240, 197, 46, 0.5) 113px, #ffffff 113px);
@@ -496,6 +495,15 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   width: 560px;
 }
 
+.title {
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 47px;
+  line-height: 1.19;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #000000;
+}
+
 .actual__title {
   position: relative;
 
@@ -526,6 +534,60 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   letter-spacing: 0.15px;
   text-align: left;
   color: #464646;
+}
+
+.button {
+  position: relative;
+  z-index: 2;
+
+  display: inline-block;
+  vertical-align: top;
+  padding: 8px;
+
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  color: #000000;
+
+  background-color: transparent;
+  border: none;
+}
+
+.button::before {
+  content: "";
+  z-index: -1;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  width: 100%;
+  height: 8px;
+
+  background-color: #f0c52e;
+  transition: transform;
+  transform: translateY(-4px);
+}
+
+.button:hover::before,
+.button:focus::before {
+  height: 40px;
+  transform: translateY(-20px);
+}
+
+.button:focus {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.about-us__button,
+.contacts__button {
+  min-width: 244px;
 }
 
 .actual__button {
@@ -571,6 +633,61 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   padding: 7px 0 0;
 }
 
+.main__goods {
+  margin: 0 auto;
+}
+
+.goods {
+  display: flex;
+  justify-content: space-between;
+
+  width: 1160px;
+}
+
+.goods__item {
+  width: 160px;
+
+  text-decoration: none;
+}
+
+.goods__image {
+  display: flex;
+
+  height: 160px;
+
+  background-color: rgba(240, 197, 46, 0.5);
+}
+
+.goods__icon {
+  margin: 0 auto;
+}
+
+.goods__icon--bottom {
+  margin-top: auto;
+}
+
+.goods__title {
+  margin: 34px 0 0;
+
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.33;
+  font-weight: 800;
+  letter-spacing: 0.18px;
+  text-align: left;
+  color: #000000;
+}
+
+.goods__item:hover .goods__image,
+.goods__item:focus .goods__image {
+  background-color: #f0c52e;
+}
+
+.goods__item:focus .goods__icon,
+.goods__item:focus .goods__title {
+  opacity: 0.3;
+}
+
 .main__info {
   display: flex;
   justify-content: space-between;
@@ -582,15 +699,6 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 .about-us,
 .contacts {
   width: 560px;
-}
-
-.title {
-  font-family: 'Gilroy', Arial, sans-serif;
-  font-size: 47px;
-  line-height: 1.19;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  color: #000000;
 }
 
 .about-us__title,
@@ -657,60 +765,6 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 
   border: 2px solid #e6e6e6;
   border-radius: 50%;
-}
-
-.button {
-  position: relative;
-  z-index: 2;
-
-  display: inline-block;
-  vertical-align: top;
-  padding: 8px;
-
-  font-family: 'Gilroy', Arial, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 800;
-  letter-spacing: 3.6px;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  vertical-align: middle;
-  color: #000000;
-
-  background-color: transparent;
-  border: none;
-}
-
-.button::before {
-  content: "";
-  z-index: -1;
-
-  position: absolute;
-  top: 50%;
-  left: 0;
-
-  width: 100%;
-  height: 8px;
-
-  background-color: #f0c52e;
-  transition: transform;
-  transform: translateY(-4px);
-}
-
-.button:hover::before,
-.button:focus::before {
-  height: 40px;
-  transform: translateY(-20px);
-}
-
-.button:focus {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.about-us__button,
-.contacts__button {
-  min-width: 244px;
 }
 
 .contacts__content {
