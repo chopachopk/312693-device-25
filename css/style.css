@@ -565,6 +565,7 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .button::before {
@@ -739,10 +740,14 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 }
 
 .main__services-slider {
+  margin-bottom: 94px;
+}
+
+.services {
   background-image: linear-gradient(to bottom, #ffffff 100px, #e5e5e5 100px);
 }
 
-.services__wrapper {
+.services__slide {
   display: flex;
   justify-content: space-between;
 
@@ -768,8 +773,23 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   width: 160px;
 }
 
-.services__button:focus {
+.services__button:disabled {
+  cursor: default;
+}
+
+.services__button:focus,
+.services__button:disabled {
   color: #f7e184;
+}
+
+.services__button:disabled::before {
+  top: 0;
+
+  width: 277px;
+  height: 40px;
+
+  background-color: #000000;
+  transform: none;
 }
 
 .services__button:focus::before {
@@ -779,8 +799,8 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 }
 
 .service {
-  width: 460px;
-  padding-right: 300px;
+  width: 450px;
+  padding-right: 310px;
 
   background-repeat: no-repeat;
 }
@@ -788,6 +808,16 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 .service--delivery {
   background-image: url(../img/delivery.svg);
   background-position: top 87px right 66px;
+}
+
+.service--guarantee {
+  background-image: url(../img/warranty.svg);
+  background-position: top 63px right 46px;
+}
+
+.service--credit {
+  background-image: url(../img/credit.svg);
+  background-position: top 63px right 70px;
 }
 
 .service__title {
@@ -802,6 +832,68 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   letter-spacing: 0.15px;
   text-align: left;
   color: #464646;
+}
+
+.services__slide--two,
+.services__slide--three {
+  display: none;
+}
+
+.main__brands {
+  margin-bottom: 94px;
+}
+
+.brands__list {
+  display: flex;
+  justify-content: space-between;
+
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0;
+
+  list-style: none;
+}
+
+.brands__link {
+  display: block;
+
+  width: 260px;
+  height: 100px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.brands__link--dgi {
+  background-image: url(../img/logo-1-grey.png);
+}
+
+.brands__link--dgi:hover {
+  background-image: url(../img/logo-1.png);
+}
+
+.brands__link--spadgets {
+  background-image: url(../img/logo-2-grey.png);
+}
+
+.brands__link--spadgets:hover {
+  background-image: url(../img/logo-2.png);
+}
+
+.brands__link--gopro {
+  background-image: url(../img/logo-3-grey.png);
+}
+
+.brands__link--gopro:hover {
+  background-image: url(../img/logo-3.png);
+}
+
+.brands__link--vive {
+  background-image: url(../img/logo-4-grey.png);
+}
+
+.brands__link--vive:hover {
+  background-image: url(../img/logo-4.png);
 }
 
 .main__info {
@@ -822,6 +914,8 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   position: relative;
 
   margin: 52px 0 44px 0;
+
+  line-height: 48px;
 }
 
 .about-us__title::before,

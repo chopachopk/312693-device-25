@@ -206,26 +206,82 @@
           <h2 class="goods__title">Квадрокоптеры</h2>
         </a>
       </section>
-      <section class="main__services-slider services">
-        <div class="services__wrapper">
+      <div class="main__services-slider services">
+        <section class="services__slide services__slide--one">
           <ul class="services__control">
-            <li class="services__control-item services__control-item--current">
-              <button class="services__button button" type="button">Доставка</button>
+            <li class="services__control-item">
+              <button class="services__button button" type="button" name="open-service-delivery" disabled>Доставка</button>
             </li>
             <li class="services__control-item">
-              <button class="services__button button" type="button">Гарантия</button>
+              <button class="services__button button" type="button" name="open-service-guarantee">Гарантия</button>
             </li>
             <li class="services__control-item">
-              <button class="services__button button" type="button">Кредит</button>
+              <button class="services__button button" type="button" name="open-service-credit">Кредит</button>
             </li>
           </ul>
-          <section class="services__slide service service--delivery">
+          <div class="services__service service service--delivery">
             <h2 class="service__title title">Доставка</h2>
             <p class="service__content">
               Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
             </p>
-          </section>
-        </div>
+          </div>
+        </section>
+        <section class="services__slide services__slide--two">
+          <ul class="services__control">
+            <li class="services__control-item">
+              <button class="services__button button" type="button" name="open-service-delivery">Доставка</button>
+            </li>
+            <li class="services__control-item">
+              <button class="services__button button" type="button" name="open-service-guarantee" disabled>Гарантия</button>
+            </li>
+            <li class="services__control-item">
+              <button class="services__button button" type="button" name="open-service-credit">Кредит</button>
+            </li>
+          </ul>
+          <div class="services__service service service--guarantee">
+            <h2 class="service__title title">Гарантия</h2>
+            <p class="service__content">
+              Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
+              Товар, не дом, конечно же.
+            </p>
+          </div>
+        </section>
+        <section class="services__slide services__slide--three">
+          <ul class="services__control">
+            <li class="services__control-item">
+              <button class="services__button button" type="button" name="open-service-delivery">Доставка</button>
+            </li>
+            <li class="services__control-item">
+              <button class="services__button button" type="button" name="open-service-guarantee">Гарантия</button>
+            </li>
+            <li class="services__control-item">
+              <button class="services__button button" type="button" name="open-service-credit" disabled>Кредит</button>
+            </li>
+          </ul>
+          <div class="services__service service service--credit">
+            <h2 class="service__title title">Кредит</h2>
+            <p class="service__content">
+              Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br>
+              условия кредита. Выгодные для нашего банка, разумеется.
+            </p>
+          </div>
+        </section>
+      </div>
+      <section class="main__brands brands">
+        <ul class="brands__list">
+          <li class="brands__item">
+            <a class="brands__link brands__link--dgi" href="#" aria-label="DGI"></a>
+          </li>
+          <li class="brands__item">
+            <a class="brands__link brands__link--spadgets" href="#" aria-label="SP-Adgets"></a>
+          </li>
+          <li class="brands__item">
+            <a class="brands__link brands__link--gopro" href="#" aria-label="GoPro"></a>
+          </li>
+          <li class="brands__item">
+            <a class="brands__link brands__link--vive" href="#" aria-label="Vive"></a>
+          </li>
+        </ul>
       </section>
       <div class="main__info">
         <section class="about-us">
