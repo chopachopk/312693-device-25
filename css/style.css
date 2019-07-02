@@ -440,7 +440,12 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 }
 
 .main__actual-slider {
-  margin: 0 auto 108px;
+  width: 1160px;
+  min-height: 500px;
+  margin: 0 auto 94px;
+
+  background-color: #ffffff;
+  background-image: linear-gradient(to bottom, rgba(240, 197, 46, 0.5) 113px, #ffffff 113px);
 }
 
 .actual {
@@ -448,11 +453,6 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 
   display: flex;
   flex-direction: row;
-
-  width: 1160px;
-
-  background-color: #ffffff;
-  background-image: linear-gradient(to bottom, rgba(240, 197, 46, 0.5) 113px, #ffffff 113px);
 }
 
 .actual::before {
@@ -488,7 +488,15 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 
 .actual__img {
   display: block;
-  margin: 0 auto;
+  margin: 2px auto 0;
+}
+
+.actual__img--fitness {
+  margin-top: 14px;
+}
+
+.actual__img--quadro {
+  margin-top: 65px;
 }
 
 .actual__info {
@@ -541,7 +549,7 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   z-index: 2;
 
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   padding: 8px;
 
   font-family: 'Gilroy', Arial, sans-serif;
@@ -594,6 +602,45 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   min-width: 204px;
 }
 
+.actual__switch-list {
+  display: inline-flex;
+  justify-content: space-between;
+
+  width: 78px;
+  margin: 0 0 0 175px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.actual__switch {
+  position: relative;
+
+  width: 12px;
+  height: 12px;
+  padding: 0;
+
+  border: 1px solid #000000;
+  border-radius: 50%;
+
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.actual__switch:disabled::before {
+  content: "";
+
+  position: absolute;
+  top: 2px;
+  left: 2px;
+
+  width: 4px;
+  height: 4px;
+
+  border: 1px solid #000000;
+  border-radius: 50%;
+}
+
 .actual__specification {
   margin-top: 51px;
 
@@ -631,6 +678,11 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 
 .specification__option {
   padding: 7px 0 0;
+}
+
+.actual--two,
+.actual--three {
+  display: none;
 }
 
 .main__goods {
