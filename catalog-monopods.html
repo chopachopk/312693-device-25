@@ -82,8 +82,24 @@
       </div>
       <div class="main__content">
         <section class="main__filters filters">
-          <h2 class="filters__title visually-hidden">Фильтр товаров</h2>
+          <h2 class="filters__title">Фильтр:</h2>
           <form class="filters__form filter" action="https://echo.htmlacademy.ru" method="get">
+            <fieldset class="filter__set">
+              <legend class="filter__setname">Стоимость</legend>
+              <div class="filter__range range">
+                <div class="range__controls">
+                  <div class="range__scale">
+                    <div class="range__bar"></div>
+                  </div>
+                  <div class="range__toggle range__toggle--min" tabindex="0"></div>
+                  <div class="range__toggle range__toggle--max" tabindex="0"></div>
+                </div>
+                <div class="range__price-controls">
+                  <label class="range__price range__price--min">от <input class="range__price-value" name="min-price" type="text" value="0"></label>
+                  <label class="range__price range__price--max">до <input class="range__price-value" name="max-price" type="text" value="5000"></label>
+                </div>
+              </div>
+            </fieldset>
             <fieldset class="filter__set">
               <legend class="filter__setname">Цвет</legend>
               <ul class="filter__colors color-list">
@@ -129,6 +145,28 @@
         </section>
         <section class="main__catalog catalog">
           <h2 class="catalog__title visually-hidden">Список моноподов для селфи</h2>
+          <div class="catalog__sort sort">
+            <p class="sort__title">Сортировка:</p>
+            <ul class="sort__parameters-list">
+              <li class="sort__parameters-item">
+                <button class="sort__parameter" type="button" name="sort-price" disabled>По цене</button>
+              </li>
+              <li class="sort__parameters-item">
+                <button class="sort__parameter" type="button" name="sort-type">По типу</button>
+              </li>
+              <li class="sort__parameters-item">
+                <button class="sort__parameter" type="button" name="sort-popularity">По популярности</button>
+              </li>
+            </ul>
+            <ul class="sort__order-list">
+              <li class="sort__order-item">
+                <button class="sort__order sort__order--increase" type="button" name="sort-increase"></button>
+              </li>
+              <li class="sort__order-item">
+                <button class="sort__order sort__order--decrease" type="button" name="sort-decrease" disabled></button>
+              </li>
+            </ul>
+          </div>
           <ul class="catalog__list">
             <li class="catalog__item catalog-item">
               <h3 class="catalog-item__title">
@@ -191,6 +229,25 @@
               <p class="catalog-item__price">4 900 руб.</p>
             </li>
           </ul>
+          <div class="catalog__pagination pagination">
+            <ul class="pagination__list">
+              <li class="pagination__item pagination__item--prev">
+                <a class="pagination__control" href="#">Назад</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link pagination__link--current" href="">1</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">2</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">3</a>
+              </li>
+              <li class="pagination__item pagination__item--next">
+                <a class="pagination__control" href="#">Вперед</a>
+              </li>
+            </ul>
+          </div>
         </section>
       </div>
     </main>
