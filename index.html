@@ -307,41 +307,7 @@
           <a class="contacts__map-link" href="#">
             <img class="contacts__map-img" src="img/map.png" width="560" height="222" alt="Ул. Строителей, 15">
           </a>
-          <section class="contacts__map-popup map-popup">
-            <h3 class="map-popup__title visually-hidden">
-              Как до нас добраться
-            </h3>
-            <img class="map-popup__map-img" src="img/map-big.png" width="960" height="559" alt="Офис компании по адресу ул. Строителей, 15, Москва">
-            <button class="map-popup__close" type="button">
-              Закрыть
-            </button>
-          </section>
           <a class="contacts__button button" href="#">Напишите нам</a>
-          <section class="contacts__letter-popup letter-popup">
-            <h3 class="letter-popup__title visually-hidden">
-              Напишите нам
-            </h3>
-            <form class="letter-popup__letter-form letter-form" action="https://echo.htmlacademy.ru" method="post">
-              <div class="letter-form__item">
-                <label class="letter-form__label" for="name">Ваше имя:</label>
-                <input class="letter-form__field letter-form__field--name" type="text" name="name" id="name" placeholder="Имя Фамилия">
-              </div>
-              <div class="letter-form__item">
-                <label class="letter-form__label" for="email">Ваш e-mail:</label>
-                <input class="letter-form__field letter-form__field--email" type="email" name="email" id="email" placeholder="email@example.com">
-              </div>
-              <div class="letter-form__item">
-                <label class="letter-form__label" for="letter">Текст письма:</label>
-                <textarea class="letter-form__text-field" name="letter" id="letter" placeholder="В свободной форме"></textarea>
-              </div>
-              <button class="letter-form__submit button" type="submit" name="send-letter-form">
-                Отправить
-              </button>
-              <button class="letter-form__close" type="button" name="close-letter-form">
-                Закрыть
-              </button>
-            </form>
-          </section>
         </section>
       </div>
     </main>
@@ -392,5 +358,39 @@
         </div>
       </div>
     </footer>
+    <section class="contacts__map-popup map-popup popup">
+      <button class="popup__close" type="button"  name="close-map-popup">
+        Закрыть
+      </button>
+      <h3 class="popup__title visually-hidden">
+        Как до нас добраться
+      </h3>
+      <img class="popup__map-img" src="img/map-big.png" width="960" height="559" alt="Офис компании по адресу ул. Строителей, 15, Москва">
+    </section>
+    <section class="contacts__letter-popup letter-popup popup">
+      <button class="popup__close" type="button" name="close-letter-popup">
+        Закрыть
+      </button>
+      <h3 class="popup__title visually-hidden">
+        Напишите нам
+      </h3>
+      <form class="popup__letter-form letter-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="letter-form__item">
+          <label class="letter-form__label" for="name">Ваше имя:</label>
+          <input class="letter-form__field letter-form__field--name" type="text" name="name" id="name" placeholder="Имя Фамилия">
+        </div>
+        <div class="letter-form__item">
+          <label class="letter-form__label" for="email">Ваш e-mail:</label>
+          <input class="letter-form__field letter-form__field--email" type="email" name="email" id="email" placeholder="email@example.com">
+        </div>
+        <div class="letter-form__item">
+          <label class="letter-form__label" for="letter">Текст письма:</label>
+          <textarea class="letter-form__field letter-form__field--text" name="letter" id="letter" placeholder="В свободной форме"></textarea>
+        </div>
+        <button class="letter-form__submit button" type="submit" name="send-letter-form">
+          Отправить
+        </button>
+      </form>
+    </section>
   </body>
 </html>
