@@ -469,14 +469,14 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 }
 
 .main__actual-slider {
-  margin: 0 auto 94px;
+  margin: 0 auto 105px;
 }
 
 .actual {
   position: relative;
 
   width: 1160px;
-  min-height: 500px;
+  min-height: 480px;
 
   background-color: #ffffff;
   background-image: linear-gradient(to bottom, rgba(240, 197, 46, 0.5) 113px, #ffffff 113px);
@@ -484,7 +484,7 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 
 .actual__controls {
   position: absolute;
-  top: 315px;
+  bottom: 140px;
   right: 74px;
   z-index: 100;
 
