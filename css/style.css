@@ -469,7 +469,7 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 }
 
 .main__actual-slider {
-  margin: 0 auto 105px;
+  margin: 0 auto;
 }
 
 .actual {
@@ -484,7 +484,7 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 
 .actual__controls {
   position: absolute;
-  bottom: 140px;
+  bottom: 245px;
   right: 74px;
   z-index: 100;
 
@@ -708,7 +708,7 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 }
 
 .actual__specification {
-  margin-top: 51px;
+  margin: 51px 0 114px;
 
   border-collapse: collapse;
 }
