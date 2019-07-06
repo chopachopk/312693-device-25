@@ -347,6 +347,8 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 .nav-catalog {
   position: relative;
   width: 540px;
+  width: 260px;
+  margin-right: 280px;
 }
 
 .nav-catalog__title {
@@ -390,11 +392,11 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 
 .nav-catalog__list {
   position: absolute;
-  top: 46px;
+  top: 21px;
   left: -60px;
   z-index: 1;
 
-  display: flex;
+  display: none;
   flex-direction: column;
   align-content: flex-start;
   flex-wrap: wrap;
@@ -402,14 +404,14 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   width: 1040px;
   height: 142px;
   margin: 0;
-  padding: 0 60px;
+  padding: 25px 60px 0;
   list-style: none;
 
   background-color: #f7e296;
 }
 
-.nav-catalog__list {
-  display: none;
+.nav-catalog:hover .nav-catalog__list {
+  display: flex;
 }
 
 .nav-catalog__item {
@@ -1910,12 +1912,28 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   color: rgba(255, 255, 255, 0.3);
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateX(-2600px);
+  }
+  70% {
+    transform: translateX(30px);
+  }
+  90% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .popup {
   position: fixed;
   top: 50%;
   left: 50%;
   z-index: 2;
 
+  display: none;
   width: 960px;
   margin-left: -480px;
   margin-top: -280px;
@@ -1924,14 +1942,33 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
 }
 
+.popup-show {
+  display: block;
+
+  animation: bounce 0.6s;
+}
+
 .map-popup {
   height: 559px;
-  display: none;
+}
+
+.popup__map-google {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}
+
+.popup__map-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  margin: 0;
 }
 
 .letter-popup {
-  display: none;
-
   box-sizing: border-box;
   margin-top: -275px;
   padding: 90px 98px 84px;
@@ -1941,6 +1978,7 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   position: absolute;
   top: 22px;
   right: 22px;
+  z-index: 3;
 
   width: 55px;
   height: 55px;
@@ -2026,6 +2064,7 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 
 .letter-form__field:invalid {
   background-color: #f6dada;
+  outline: 0;
 }
 
 .letter-form__field--text {
