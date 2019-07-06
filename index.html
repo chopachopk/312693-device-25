@@ -63,110 +63,88 @@
       </nav>
     </header>
     <main class="main">
-      <div class="main__actual-slider">
-        <section class="main__actual-slide actual actual--one">
-          <div class="actual__photo">
-            <img class="actual__img" src="img/slider-1.png" width="384" height="486" alt="Длинная селфи-палка">
-          </div>
-          <div class="actual__info">
-            <h2 class="actual__title title">Делай селфи,<br>как Бен Стиллер!</h2>
-            <p class="actual__content">
-              Самая длинная палка для селфи доступна в нашем магазине.
-              Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
-            </p>
-            <a class="actual__button button" href="#">Подробнее</a>
-            <ul class="actual__switch-list">
-              <li class="actual__switch-item">
-                <button class="actual__switch" type="button" name="open-first-actual" disabled></button>
-              </li>
-              <li class="actual__switch-item">
-                <button class="actual__switch" type="button" name="open-second-actual"></button>
-              </li>
-              <li class="actual__switch-item">
-                <button class="actual__switch" type="button" name="open-third-actual"></button>
-              </li>
-            </ul>
-            <table class="actual__specification specification">
-              <tr class="specification__values-row">
-                <td class="specification__value">8,5 м</td>
-                <td class="specification__value">5 кг</td>
-                <td class="specification__value">Карбон</td>
-              </tr>
-              <tr class="specification__options-row">
-                <td class="specification__option">Длина палки</td>
-                <td class="specification__option">Вес палки</td>
-                <td class="specification__option">Материал</td>
-              </tr>
-            </table>
-          </div>
-        </section>
-        <section class="main__actual-slide actual actual--two">
-          <div class="actual__photo">
-            <img class="actual__img actual__img--fitness" src="img/slider-2.png" width="345" height="485" alt="Мотивирующий фитнес-браслет">
-          </div>
-          <div class="actual__info">
-            <h2 class="actual__title title">Худеем<br>правильно!</h2>
-            <p class="actual__content">
-              Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
-              не пропускать занятия и соблюдать диету.
-            </p>
-            <a class="actual__button button" href="#">Подробнее</a>
-            <ul class="actual__switch-list">
-              <li class="actual__switch-item">
-                <button class="actual__switch" type="button" name="open-first-actual"></button>
-              </li>
-              <li class="actual__switch-item">
-                <button class="actual__switch" type="button" name="open-second-actual" disabled></button>
-              </li>
-              <li class="actual__switch-item">
-                <button class="actual__switch" type="button" name="open-third-actual"></button>
-              </li>
-            </ul>
-            <table class="actual__specification specification">
-              <tr class="specification__values-row">
-                <td class="specification__value">48 часов</td>
-              </tr>
-              <tr class="specification__options-row">
-                <td class="specification__option">Без подзарядки</td>
-              </tr>
-            </table>
-          </div>
-        </section>
-        <section class="main__actual-slide actual actual--three">
-          <div class="actual__photo">
-            <img class="actual__img actual__img--quadro" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер с лазером">
-          </div>
-          <div class="actual__info">
-            <h2 class="actual__title title">Порхает как бабочка, жалит как пчела!</h2>
-            <p class="actual__content">
-              Этот обычный, на первый взгляд, квадрокоптер оснащен
-              мощным лазером, замаскированным под стандартную камеру.
-            </p>
-            <a class="actual__button button" href="#">Подробнее</a>
-            <ul class="actual__switch-list">
-              <li class="actual__switch-item">
-                <button class="actual__switch" type="button" name="open-first-actual"></button>
-              </li>
-              <li class="actual__switch-item">
-                <button class="actual__switch" type="button" name="open-second-actual"></button>
-              </li>
-              <li class="actual__switch-item">
-                <button class="actual__switch" type="button" name="open-third-actual" disabled></button>
-              </li>
-            </ul>
-            <table class="actual__specification specification">
-              <tr class="specification__values-row">
-                <td class="specification__value">800 м</td>
-                <td class="specification__value">50 м</td>
-              </tr>
-              <tr class="specification__options-row">
-                <td class="specification__option">Дальность полета</td>
-                <td class="specification__option">Радиус поражения</td>
-              </tr>
-            </table>
-          </div>
-        </section>
-      </div>
+      <section class="main__actual-slider actual">
+        <h2 class="visually-hidden">Актуальные товары</h2>
+        <input class="actual__slide--1 visually-hidden" type="radio" id="product-1" name="actual-toggle" checked>
+        <input class="actual__slide--2 visually-hidden" type="radio" id="product-2" name="actual-toggle">
+        <input class="actual__slide--3 visually-hidden" type="radio" id="product-3" name="actual-toggle">
+        <div class="actual__controls">
+          <label class="actual__switch actual__switch--1" for="product-1">Первый</label>
+          <label class="actual__switch actual__switch--2" for="product-2">Первый</label>
+          <label class="actual__switch actual__switch--3" for="product-3">Первый</label>
+        </div>
+        <ul class="actual__list">
+          <li class="actual__item">
+            <div class="actual__photo">
+              <img class="actual__img" src="img/slider-1.png" width="384" height="486" alt="Длинная селфи-палка">
+            </div>
+            <div class="actual__info">
+              <h3 class="actual__title title">Делай селфи,<br>как Бен Стиллер!</h2>
+              <p class="actual__content">
+                Самая длинная палка для селфи доступна в нашем магазине.
+                Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+              </p>
+              <a class="actual__button button" href="#">Подробнее</a>
+              <table class="actual__specification specification">
+                <tr class="specification__values-row">
+                  <td class="specification__value">8,5 м</td>
+                  <td class="specification__value">5 кг</td>
+                  <td class="specification__value">Карбон</td>
+                </tr>
+                <tr class="specification__options-row">
+                  <td class="specification__option">Длина палки</td>
+                  <td class="specification__option">Вес палки</td>
+                  <td class="specification__option">Материал</td>
+                </tr>
+              </table>
+            </div>
+          </li>
+          <li class="actual__item">
+            <div class="actual__photo">
+              <img class="actual__img actual__img--fitness" src="img/slider-2.png" width="345" height="485" alt="Мотивирующий фитнес-браслет">
+            </div>
+            <div class="actual__info">
+              <h3 class="actual__title title">Худеем<br>правильно!</h2>
+              <p class="actual__content">
+                Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
+                не пропускать занятия и соблюдать диету.
+              </p>
+              <a class="actual__button button" href="#">Подробнее</a>
+              <table class="actual__specification specification">
+                <tr class="specification__values-row">
+                  <td class="specification__value">48 часов</td>
+                </tr>
+                <tr class="specification__options-row">
+                  <td class="specification__option">Без подзарядки</td>
+                </tr>
+              </table>
+            </div>
+          </li>
+          <li class="actual__item">
+            <div class="actual__photo">
+              <img class="actual__img actual__img--quadro" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер с лазером">
+            </div>
+            <div class="actual__info">
+              <h3 class="actual__title title">Порхает как бабочка, жалит как пчела!</h2>
+              <p class="actual__content">
+                Этот обычный, на первый взгляд, квадрокоптер оснащен
+                мощным лазером, замаскированным под стандартную камеру.
+              </p>
+              <a class="actual__button button" href="#">Подробнее</a>
+              <table class="actual__specification specification">
+                <tr class="specification__values-row">
+                  <td class="specification__value">800 м</td>
+                  <td class="specification__value">50 м</td>
+                </tr>
+                <tr class="specification__options-row">
+                  <td class="specification__option">Дальность полета</td>
+                  <td class="specification__option">Радиус поражения</td>
+                </tr>
+              </table>
+            </div>
+          </li>
+        </ul>
+      </section>
       <section class="main__goods goods">
         <h1 class="main__title visually-hidden">Магазин гаджетов «DEVICE»</h1>
         <a class="goods__item" href="#">
@@ -206,67 +184,61 @@
           <h2 class="goods__title">Квадрокоптеры</h2>
         </a>
       </section>
-      <div class="main__services-slider services">
-        <section class="services__slide services__slide--one">
-          <ul class="services__control">
-            <li class="services__control-item">
-              <button class="services__button button" type="button" name="open-service-delivery" disabled>Доставка</button>
+
+
+      <section class="main__services-slider services">
+        <div class="services__wrapper">
+          <h2 class="visually-hidden">Услуги</h2>
+          <input class="services__slide--1 visually-hidden" type="radio" id="service-1" name="service-toggle" checked>
+          <input class="services__slide--2 visually-hidden" type="radio" id="service-2" name="service-toggle">
+          <input class="services__slide--3 visually-hidden" type="radio" id="service-3" name="service-toggle">
+          <div class="services__controls">
+            <label class="services__switch services__switch--1 button" for="service-1">Доставка</label>
+            <label class="services__switch services__switch--2 button" for="service-2">Гарантия</label>
+            <label class="services__switch services__switch--3 button" for="service-3">Кредит</label>
+          </div>
+          <ul class="services__list">
+            <li class="services__item">
+              <h3 class="service__title title">Доставка</h2>
+              <p class="service__content">
+                Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+              </p>
             </li>
-            <li class="services__control-item">
-              <button class="services__button button" type="button" name="open-service-guarantee">Гарантия</button>
+            <li class="services__item">
+              <h3 class="service__title title">Гарантия</h2>
+              <p class="service__content">
+                Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
+                Товар, не дом, конечно же.
+              </p>
             </li>
-            <li class="services__control-item">
-              <button class="services__button button" type="button" name="open-service-credit">Кредит</button>
+            <li class="services__item">
+              <h3 class="service__title title">Кредит</h2>
+              <p class="service__content">
+                Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br>
+                условия кредита. Выгодные для нашего банка, разумеется.
+              </p>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <!-- <div class="main__services-slider services">
+        <section class="services__slide services__slide--one">
           <div class="services__service service service--delivery">
-            <h2 class="service__title title">Доставка</h2>
-            <p class="service__content">
-              Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
-            </p>
+
           </div>
         </section>
         <section class="services__slide services__slide--two">
-          <ul class="services__control">
-            <li class="services__control-item">
-              <button class="services__button button" type="button" name="open-service-delivery">Доставка</button>
-            </li>
-            <li class="services__control-item">
-              <button class="services__button button" type="button" name="open-service-guarantee" disabled>Гарантия</button>
-            </li>
-            <li class="services__control-item">
-              <button class="services__button button" type="button" name="open-service-credit">Кредит</button>
-            </li>
-          </ul>
           <div class="services__service service service--guarantee">
-            <h2 class="service__title title">Гарантия</h2>
-            <p class="service__content">
-              Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
-              Товар, не дом, конечно же.
-            </p>
+
           </div>
         </section>
         <section class="services__slide services__slide--three">
-          <ul class="services__control">
-            <li class="services__control-item">
-              <button class="services__button button" type="button" name="open-service-delivery">Доставка</button>
-            </li>
-            <li class="services__control-item">
-              <button class="services__button button" type="button" name="open-service-guarantee">Гарантия</button>
-            </li>
-            <li class="services__control-item">
-              <button class="services__button button" type="button" name="open-service-credit" disabled>Кредит</button>
-            </li>
-          </ul>
           <div class="services__service service service--credit">
-            <h2 class="service__title title">Кредит</h2>
-            <p class="service__content">
-              Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br>
-              условия кредита. Выгодные для нашего банка, разумеется.
-            </p>
+
           </div>
         </section>
-      </div>
+      </div> -->
       <section class="main__brands brands">
         <ul class="brands__list">
           <li class="brands__item">

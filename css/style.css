@@ -469,22 +469,103 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 }
 
 .main__actual-slider {
-  width: 1160px;
-  min-height: 500px;
   margin: 0 auto 94px;
-
-  background-color: #ffffff;
-  background-image: linear-gradient(to bottom, rgba(240, 197, 46, 0.5) 113px, #ffffff 113px);
 }
 
 .actual {
   position: relative;
 
-  display: flex;
+  width: 1160px;
+  min-height: 500px;
+
+  background-color: #ffffff;
+  background-image: linear-gradient(to bottom, rgba(240, 197, 46, 0.5) 113px, #ffffff 113px);
+}
+
+.actual__controls {
+  position: absolute;
+  top: 315px;
+  right: 74px;
+  z-index: 100;
+
+  width: 94px;
+}
+
+.actual__switch {
+  position: relative;
+
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  padding: 8px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.actual__switch::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 8px;
+
+  width: 11px;
+  height: 11px;
+
+  border: 1px solid #000000;
+  border-radius: 50%;
+}
+
+.actual__switch--active {
+  cursor: default;
+}
+
+.actual__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.actual__item {
+  position: relative;
+
+  display: none;
   flex-direction: row;
 }
 
-.actual::before {
+.actual__slide--1:checked ~ .actual__list .actual__item:nth-child(1) {
+  display: flex;
+}
+
+.actual__slide--2:checked ~ .actual__list .actual__item:nth-child(2) {
+  display: flex;
+}
+
+.actual__slide--3:checked ~ .actual__list .actual__item:nth-child(3) {
+  display: flex;
+}
+
+.actual__slide--1:checked ~ .actual__controls .actual__switch--1::before,
+.actual__slide--2:checked ~ .actual__controls .actual__switch--2::before,
+.actual__slide--3:checked ~ .actual__controls .actual__switch--3::before {
+  content: "";
+
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  width: 3px;
+  height: 3px;
+
+  border: 1px solid #000000;
+  border-radius: 50%;
+}
+
+.actual__item::before {
   position: absolute;
   top: -12px;
   right: 46px;
@@ -498,15 +579,15 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   color: #ffffff;
 }
 
-.actual--one::before {
+.actual__item:nth-child(1)::before {
   content: "01";
 }
 
-.actual--two::before {
+.actual__item:nth-child(2)::before {
   content: "02";
 }
 
-.actual--three::before {
+.actual__item:nth-child(3)::before {
   content: "03";
 }
 
@@ -626,45 +707,6 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   min-width: 204px;
 }
 
-.actual__switch-list {
-  display: inline-flex;
-  justify-content: space-between;
-
-  width: 78px;
-  margin: 0 0 0 175px;
-  padding: 0;
-
-  list-style: none;
-}
-
-.actual__switch {
-  position: relative;
-
-  width: 12px;
-  height: 12px;
-  padding: 0;
-
-  border: 1px solid #000000;
-  border-radius: 50%;
-
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.actual__switch:disabled::before {
-  content: "";
-
-  position: absolute;
-  top: 2px;
-  left: 2px;
-
-  width: 4px;
-  height: 4px;
-
-  border: 1px solid #000000;
-  border-radius: 50%;
-}
-
 .actual__specification {
   margin-top: 51px;
 
@@ -702,11 +744,6 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
 
 .specification__option {
   padding: 7px 0 0;
-}
-
-.actual--two,
-.actual--three {
-  display: none;
 }
 
 .main__goods {
@@ -770,15 +807,19 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   background-image: linear-gradient(to bottom, #ffffff 100px, #e5e5e5 100px);
 }
 
-.services__slide {
-  display: flex;
-  justify-content: space-between;
+.services__wrapper {
+  position: relative;
 
-  width: 1160px;
+  width: 760px;
   margin: 0 auto;
+  padding-left: 400px;
 }
 
-.services__control {
+.services__controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -788,24 +829,55 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   margin: 0 0 70px;
   padding: 80px 0 70px;
   border-right: 7px solid #000000;
+}
+
+.services__switch {
+  width: 146px;
+}
+
+.services__list {
+  width: 760px;
+  margin: 0;
+  padding: 0;
 
   list-style: none;
 }
 
-.services__button {
-  width: 160px;
+.services__item {
+  display: none;
+  padding: 72px 310px 130px 0;
+
+  background-repeat: no-repeat;
 }
 
-.services__button:disabled {
+.services__slide--1:checked ~ .services__list .services__item:nth-child(1) {
+  display: block;
+}
+
+.services__slide--2:checked ~ .services__list .services__item:nth-child(2) {
+  display: block;
+}
+
+.services__slide--3:checked ~ .services__list .services__item:nth-child(3) {
+  display: block;
+}
+
+.services__slide--1:checked ~ .services__controls .services__switch--1,
+.services__slide--2:checked ~ .services__controls .services__switch--2,
+.services__slide--3:checked ~ .services__controls .services__switch--3 {
+  color: #f7e184;
   cursor: default;
 }
 
-.services__button:focus,
-.services__button:disabled {
-  color: #f7e184;
+.services__slide--1:active ~ .services__controls .services__switch--1,
+.services__slide--2:active ~ .services__controls .services__switch--2,
+.services__slide--3:active ~ .services__controls .services__switch--3 {
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.services__button:disabled::before {
+.services__slide--1:checked ~ .services__controls .services__switch--1::before,
+.services__slide--2:checked ~ .services__controls .services__switch--2::before,
+.services__slide--3:checked ~ .services__controls .services__switch--3::before {
   top: 0;
 
   width: 277px;
@@ -815,36 +887,23 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   transform: none;
 }
 
-.services__button:focus::before {
-  width: 277px;
-
-  background-color: #000000;
-}
-
-.service {
-  width: 450px;
-  padding-right: 310px;
-
-  background-repeat: no-repeat;
-}
-
-.service--delivery {
+.services__item:nth-child(1) {
   background-image: url(../img/delivery.svg);
   background-position: top 87px right 66px;
 }
 
-.service--guarantee {
+.services__item:nth-child(2) {
   background-image: url(../img/warranty.svg);
   background-position: top 63px right 46px;
 }
 
-.service--credit {
+.services__item:nth-child(3) {
   background-image: url(../img/credit.svg);
   background-position: top 63px right 70px;
 }
 
 .service__title {
-  margin: 72px 0 28px;
+  margin: 0 0 28px;
 }
 
 .service__content {
@@ -855,11 +914,6 @@ input[type="search"]::-webkit-search-cancel-button { /* убираем кноп�
   letter-spacing: 0.15px;
   text-align: left;
   color: #464646;
-}
-
-.services__slide--two,
-.services__slide--three {
-  display: none;
 }
 
 .main__brands {
